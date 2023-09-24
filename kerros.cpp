@@ -16,6 +16,6 @@ void Kerros::maaritaAsunnot()
 
 double Kerros::laskeKulutus(double hinta)
 {
-    double kulutus = hinta * (as1.asukasmaara * as1.neliot) + (as1.asukasmaara * as1.neliot) + (as1.asukasmaara * as1.neliot) + (as1.asukasmaara * as1.neliot);
+    double kulutus = as1.laskeKulutus(hinta)+as2.laskeKulutus(hinta)+as3.laskeKulutus(hinta)+as4.laskeKulutus(hinta);
     return kulutus;
 }

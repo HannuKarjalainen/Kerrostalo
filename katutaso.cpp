@@ -21,7 +21,6 @@ void Katutaso::maaritaAsunnot()
 
 double Katutaso::laskeKulutus(double hinta)
 {
-   double kulutus = hinta * (as1.asukasmaara * as1.neliot) + (as2.neliot * as2.asukasmaara)+(Kerros::as1.asukasmaara*Kerros::as1.neliot)+(Kerros::as2.asukasmaara*Kerros::as2.neliot)+(Kerros::as3.asukasmaara*Kerros::as3.neliot)+(Kerros::as4.asukasmaara*Kerros::as4.neliot);
-
+   double kulutus = as1.laskeKulutus(hinta) + as2.laskeKulutus(hinta)+Kerros::as1.laskeKulutus(hinta)+Kerros::as2.laskeKulutus(hinta)+Kerros::as3.laskeKulutus(hinta)+Kerros::as4.laskeKulutus(hinta);
    return kulutus;
 }
